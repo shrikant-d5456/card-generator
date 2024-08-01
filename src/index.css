@@ -2,32 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+}
+body{
+    background-image: linear-gradient(45deg, #ffffff, #ffffff);
+}
+h1{
+    font-size: 80px;
+    font-weight: bold;
+}
+h2{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    background-color: black;
+}
+p{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    background-color: black;
+}
+.inner1{
+    width: 100%;
+    height: 50vh;
+    color: aliceblue;
+    background-image: url("https://image.lexica.art/full_webp/59b633ea-c745-4cdc-ab6c-1581a8c9bae0");
+    object-fit: cover;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px; */
+    box-shadow: 1px 1px 40px white;
+    /* background-color: aquamarine; */
+}
+.inner2{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content:space-around;
+    
+}
+.input{
+    width: 50%;
+    display: flex;
+}
 
-.district-data:hover{
-  background-color: rgb(145, 246, 255);
+input {
+    width: 80%;
+    border-radius: 1px;
+    padding: 2%;
+    background-color: aliceblue;
+    color: black;
+    box-shadow: 2px 2px 5px rgb(94, 94, 94);
 }
-.confirmed-data:hover{
-  background-color: greenyellow;
+.btn-primary{
+    width: 20%;
+    background-color: black;
+    border-radius: 1px;
+    box-shadow: 2px 2px 5px rgb(94, 94, 94);
+    height: 9vh;
+    border: none;
 }
-.recovered-data:hover{
-  background-color: rgb(60, 255, 112);
+.form-control {
+    border-radius: 1px;
 }
-.vaccinated1-data:hover{
-  background-color: rgb(241, 255, 87);
-}
-.vaccinated2-data:hover{
-  background-color: rgb(217, 255, 0);
-}
-.Updated-data:hover{
-  background-color: rgb(208, 0, 255);
-}
-
-.data{
-  width: 20%;
-  background-color: aqua;
-  border: 1px solid black;
-}
-
-tr{
-  border: 1px solid gray;
+img{
+    box-shadow: 2px 2px 90px rgb(255, 255, 255);
 }

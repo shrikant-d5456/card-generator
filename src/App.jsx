@@ -1,85 +1,57 @@
 import React, { useEffect, useState } from 'react';
 import './index.css';
-import config from './config'; // Import the config file
-
-const App = () => {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  const apiKey = config.apiKey; // Use the API key from the config file
+import config from './config';
 
 
-  const getData = async () => {
-    try {
-      const res = await fetch(apiKey);
-      if (!res.ok) {
-        throw new Error(`HTTP error! status: ${res.status}`);
-      }
-      const actualData = await res.json();
-      console.log(actualData.MH.districts);
+const App = ()=> {
 
-      // Convert the districts object into an array
-      const districtArray = Object.entries(actualData.MH.districts).map(([district, districtData]) => ({
-        district,
-        ...districtData,
-      }));
+    const [inputText, setInputText] = useState('');
+    const [img, setImg] = useState('');
 
-      setData(districtArray);
-      setLoading(false);
-    } catch (error) {
-      setError(error.message);
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    getData();
-  }, []);
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
+    const generateQRCode = () => {
+        if (inputText === "") {
+            alert("Enter text for QR code")
+        }
+        else {
+        const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(inputText)}`;
+        setImg(qrCodeUrl)
+        }
+    };
 
   return (
-    <div className=' w-full m-auto'>
-
-      <div className=' w-full table-responsive'>
-        <div className='text-center'>
-          <h1 className=' text-xl font-semibold my-4'>India Covid 19 Cases Data</h1>
-        </div>
-        <table className='table-hover text-center w-full'>
-          <thead className=' bg-sky-100'>
-            <tr>
-              <th className='p-2'>District</th>
-              <th>Confirmed</th>
-              <th>Recovered</th>
-              <th>Vaccinated 1</th>
-              <th>Vaccinated 2</th>
-              <th>Updated</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.map((cur, index) => (
-              <tr key={index}>
-                <td className='district-data'>{cur.district}</td>
-                <td className='confirmed-data'>{cur.total?.confirmed}</td>
-                <td className='recovered-data'>{cur.total?.recovered}</td>
-                <td className='vaccinated1-data'>{cur.total?.vaccinated1}</td>
-                <td className='vaccinated2-data'>{cur.total?.vaccinated2}</td>
-                <td className='updated-data'>{cur.meta?.tested?.date}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+    <>
+    
+    <div className="inner1">
+    <h1>Create Custom QR Codes</h1>
+      <h2>You can create your own QR codes for free using online tools or software</h2>
+      <p>QR codes are two-dimensional barcodes that can store various types of information, such as URLs, text, contact details, and more. They are widely used for marketing, advertising, and customer engagement purposes. </p>
+    </div>
+    <div className="inner2">
+    <div className="input">
+    <input className="form-control"
+                    type="text"
+                    placeholder="Enter text for QR code"
+                    value={inputText}
+                    onChange={(e) => setInputText(e.target.value)}
+                    onKeyPress={e=>{
+                      if(e.key === "Enter")
+                      {
+                        generateQRCode()
+                      }
+                    }}
+                />
+    <button className="btn btn-primary" type="button" onClick={generateQRCode}>Get QR</button>
 
     </div>
-  );
+    <div className="output">
+    <img src={img} alt="Generating.." />
+    </div>
+    </div>
+    
+    
+    </>
+  )
 }
+
 
 export default App;
