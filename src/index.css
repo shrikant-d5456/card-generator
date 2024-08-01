@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.district-data:hover{
+  background-color: rgb(145, 246, 255);
+}
+.confirmed-data:hover{
+  background-color: greenyellow;
+}
+.recovered-data:hover{
+  background-color: rgb(60, 255, 112);
+}
+.vaccinated1-data:hover{
+  background-color: rgb(241, 255, 87);
+}
+.vaccinated2-data:hover{
+  background-color: rgb(217, 255, 0);
+}
+.Updated-data:hover{
+  background-color: rgb(208, 0, 255);
+}
+
+.data{
+  width: 20%;
+  background-color: aqua;
+  border: 1px solid black;
+}
+
+tr{
+  border: 1px solid gray;
+}
