@@ -64,7 +64,7 @@ const Card = () => {
             <div className=' w-full flex justify-between items-center text-sm font-mono font-semibold p-2 bg-yellow-100 border-b-2 border-white shadow-sm'>
                <p className='  text-black font-bold'>
                   Happy Ganesh Chaturthi 💞</p>
-               <p className=' text-black  text-2xl bg-white rounded-full p-1'><BsGithub /></p>
+               <a href='https://github.com/shrikant-d5456/card-generator' target='blank'><p className=' text-black  text-2xl bg-white rounded-full p-1'><BsGithub /></p></a>
             </div>
 
             <p className=' text-yellow-800 font-mono text-sm font-semibold bg-white text-left p-2'>Select Banner ▶</p>
