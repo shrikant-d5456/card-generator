@@ -2,79 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: rgb(255, 255, 255);
-}
 body{
-    background-image: linear-gradient(45deg, #ffffff, #ffffff);
-}
-h1{
-    font-size: 80px;
-    font-weight: bold;
-}
-h2{
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    background-color: black;
-}
-p{
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    background-color: black;
-}
-.inner1{
-    width: 100%;
-    height: 50vh;
-    color: aliceblue;
-    background-image: url("https://image.lexica.art/full_webp/59b633ea-c745-4cdc-ab6c-1581a8c9bae0");
-    object-fit: cover;
-    display: flex;
-    margin: auto;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    background-color: rgb(255, 251, 245);
     text-align: center;
-    /* border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px; */
-    box-shadow: 1px 1px 40px white;
-    /* background-color: aquamarine; */
-}
-.inner2{
-    width: 100%;
-    height: 50vh;
-    display: flex;
-    margin: auto;
-    align-items: center;
-    justify-content:space-around;
-    
-}
-.input{
-    width: 50%;
-    display: flex;
+    color: aliceblue;
+    font-family:cursive;
 }
 
-input {
-    width: 80%;
-    border-radius: 1px;
-    padding: 2%;
-    background-color: aliceblue;
+
+button{
+    padding: 4px 10px;
+    font-weight: 800;
+    background-color: rgb(224, 187, 0);
+    color: aliceblue;
+    margin: 1%;
+}
+
+textarea, input{
+    border: 1px solid rgb(237, 217, 0);
+    padding: 4px 8px;
+    background: white;
+    outline: none;
     color: black;
-    box-shadow: 2px 2px 5px rgb(94, 94, 94);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
 }
-.btn-primary{
-    width: 20%;
-    background-color: black;
-    border-radius: 1px;
-    box-shadow: 2px 2px 5px rgb(94, 94, 94);
-    height: 9vh;
-    border: none;
+
+
+.shadowcss{
+    box-shadow: -11px 8px 50px 44px rgb(255, 0, 123);
 }
-.form-control {
-    border-radius: 1px;
+
+.anime{
+    animation-duration: 5s;
 }
-img{
-    box-shadow: 2px 2px 90px rgb(255, 255, 255);
+
+td, tr{
+    border: 1px solid rgb(56, 56, 56);
+    padding: 8px;
 }
