@@ -66,7 +66,7 @@ const App = ({ id }) => {
   };
 
   return (
-    <div className="lg:w-10/12 m-auto my-2">
+   <div className=" w-fit m-auto my-2">
       <div ref={idCardRef}>
         {renderCard()}
       </div>
