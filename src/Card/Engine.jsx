@@ -29,7 +29,7 @@ const App = ({ id }) => {
   const [info, setInfo] = useState(
     {
     heading: "Shree Ganesh",
-    heading1: "Ganesh Chaturthi",
+    heading1: "Shree Ganesh Chaturthi",
     desc: "You are cordially invited by me & my family to take blessings of Lord Ganesha at our home during the five days of Ganesh Festival.",
     month: "Sept",
     dates: "7th to 13th",
