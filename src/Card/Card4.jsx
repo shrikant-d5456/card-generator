@@ -27,7 +27,7 @@ const Card4 = ({info}) => {
            
             <p className=' text-xl font-semibold text-yellow-800'> {info.regards}</p>
 
-            <p>ॐ</p>
+            <p>|| ॐ ||</p>
             <div className=' absolute w-20 rotate-[270deg] bottom-1 left-1'><img src={angleDesign} alt="" /></div>
         </div>
 
