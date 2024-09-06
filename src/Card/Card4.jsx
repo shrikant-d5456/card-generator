@@ -19,7 +19,7 @@ const Card4 = ({info}) => {
             <p> {info.desc} </p>
             <p className=' text-2xl font-bold text-yellow-800 font-sans uppercase'>{info.heading1}</p>
            
-            <p>From {info.dates1}</p>
+            <p>From {info.dates}</p>
             <div>
                 <p className=' uppercase text-sm'>Join us to seek bappas Blessings</p>
                 <p>{info.address}</p>
