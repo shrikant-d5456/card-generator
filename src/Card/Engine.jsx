@@ -32,7 +32,7 @@ const App = ({ id }) => {
     heading1: "Shree Ganesh Chaturthi",
     desc: "You are cordially invited by me & my family to take blessings of Lord Ganesha at our home during the five days of Ganesh Festival.",
     month: "Sept",
-    dates: "7th to 13th",
+    dates: "7th to 12th",
     dates1: "Sept 7th to Sept 13th",
     address: "Address",
     regards: "Dalvi's Family",
