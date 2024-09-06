@@ -31,7 +31,7 @@ const Card3 = ({info}) => {
             <div className=' w-[200px] h-[6vh] flex gap-4 self-center justify-center items-center bg-yellow-100 text-[#ff31c1] font-semibold p-2'>
 
                 <BsCalendar4Range className=' text-2xl' />
-                <p>{info.dates1}</p>
+                <p>{info.dates}</p>
 
             </div>
             <p> {info.desc} </p>
